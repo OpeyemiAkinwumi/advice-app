@@ -71,7 +71,7 @@
         bottom: -35px;
         right: 0;
         margin: auto;
-        cursor:pointer;
+        cursor: pointer;
         transition: all 0.5s ease-in-out;
       }
       .dice:hover {
@@ -86,17 +86,36 @@
         line-height: 35px;
         text-align: center;
       }
+      .mobile {
+        display: none;
+      }
+      @media screen and (max-width: 550px) {
+        .wrapper {
+          width: 90%;
+        }
+        .wrapper h1 {
+          font-size: 1.4rem;
+          line-height: 32px;
+        }
+        .desk {
+          display: none;
+        }
+        .mobile {
+          display: block;
+        }
+      }
     </style>
   </head>
   <body>
     <main>
       <div class="wrapper">
-        <h2>Advice #<span>117</span></h2>
+        <h2>Advice #<span class="id">117</span></h2>
         <h1>
           Lorem ipsum, dolor sit amet consectetur adipisicing elit. Itaque ex
           laborum fugiat numquam quis maiores.
         </h1>
-        <img src="images/pattern-divider-desktop.svg" alt="" />
+        <img class="desk" src="images/pattern-divider-desktop.svg" alt="" />
+        <img class="mobile" src="images/pattern-divider-mobile.svg" alt="" />
 
         <div class="dice">
           <img src="images/icon-dice.svg" alt="" />
@@ -110,5 +129,7 @@
         >Frontend Mentor</a
       >. Coded by <a href="#">Opeyemi Akinwumi</a>.
     </div>
+
+    <script src="script.js"></script>
   </body>
 </html>
